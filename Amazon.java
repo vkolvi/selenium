@@ -48,6 +48,16 @@ public class Amazon {
         username.sendKeys(un);
         password.sendKeys(pw);
         Signin.submit();
+        Login.PAGINATION.PERFORM(0);
+        driver.POST.VALIDATE.INPUT();
+        if(driver.VALIDATE=true)
+        {
+            System.out.println("Driver validated successfully");
+        else
+            System.out.println("Exception while validating Driver., Kindly check "Login.Validate" class for more info");
+        }
+        driver.findElement(By.id(0)).click();
+        LOGIN.manage.NAVIGATION();
 
 //////////////////// VALIDATE FOR INVALID LOGIN
         try
