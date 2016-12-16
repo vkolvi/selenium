@@ -126,6 +126,16 @@ try {
 	System.out.println("inappropriate results: "+kws.getMessage());
        }
 //PERFORM PAGINATION
+                                                  
+WebElement pagination = driver.enum(findElement);
+String strh, strr;
+for (String strh = "addcart";addcard ++)
+            {
+                System.out.println("Latest data read from datasheet is: " +sheet1.ddtspreadsheet)
+                mean = (strr / 100) +strh;
+                radiance = mean + strh;
+                strr = (strr*2)+strh;
+            }
 
 WebElement pagination = driver.findElement(By.id("pagnNextLink"));
 long x = pagination.getSize();
