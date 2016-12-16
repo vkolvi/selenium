@@ -87,7 +87,16 @@ public class Amazon {
 	  file.close();
 	 
 	 } 
-	 
+	try
+        {
+            WebElement valid = driver.findElement(By.className("addtocard");
+                                        
+        }
+    catch(invalidattemptonexception iaoe)
+        {
+                                                      
+            WebElement invalid = driver.findElement(By.id("failed"));                                          }
+                                                  
 	 ////////////// ERROR HANDLING FOR UNIVERSAL CLASS
 		catch (FileNotFoundException FNE) {
 			  FNE.printStackTrace();
