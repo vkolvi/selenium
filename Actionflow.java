@@ -1,14 +1,9 @@
-Google Git
-Sign in
-android / platform / frameworks / testing / android-support-test / . / espresso / sample / src / androidTest / java / android / support / test / testapp / ActionBarTest.java
-blob: ca7f73c083e602960de3a87b3c3c403abffa3de9 [file] [log] [blame]
 /**
  AUTHOR: VARUN
  DETAILS: Espresso with action bar, action controller and Action flow 
  SCOPE: Layout for android UI Automation
  OUT OF SCOPE: 
  INITIAL DATE: 20-12-2016
-
  **/
 
 package android.support.test.testapp;
