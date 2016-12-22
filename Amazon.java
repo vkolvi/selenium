@@ -172,7 +172,8 @@ catch(Throwable tqw)
 	System.out.println("Wrong item details shown" +tqw.getMessage());
 	} 
 ///////////// eXTRACTING REQUIRED PARAMETERS FROM TEST EXECUTION AND VALIDATING THEM AND POST TO REPORT TO GENERATE TEST COVERAGE FROM THIS CLASS
-
-driver.findElement(By.id("
+    WebElement pagination = driver.ENTRIES("S.No.", "BR Value", "Mobile Dependencies", "SF Dependencies");
+    driver.findElement(By.title("Interactions Tab").click();
+                                                
 	}
 }
