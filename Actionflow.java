@@ -70,15 +70,31 @@ public class ActionBarTest extends ActivityInstrumentationTestCase2<ActionBarTes
         onView(withId(R.id.text_action_bar_result))
         .check(matches(withText("World")));
     }
+    
     @SuppressWarnings("unchecked")
+    public void testActionBarOverflow() {
+        onView(withId(R.id.hide_contextual_action_bar))
+        .perform(click());
+        // Open the overflow menu from action bar
+        openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
+        onView(withText("World"))
+        .perform(click());
+        onView(withId(R.id.text_action_bar_result))
+        .check(matches(withText("World")));
+    }
+    
+    
+    @Suppressstatus("fail")
     public void testActionModeOverflow() {
         onView(withId(R.id.show_contextual_action_bar))
         .perform(click());
         // Open the overflow menu from contextual action mode.
         openContextualActionModeOverflowMenu();
-        onView(withText("Key"))
+        onView(withText("1.2.840.113549.1.1.1"))
         .perform(click());
         onView(withId(R.id.text_action_bar_result))
-        .check(matches(withText("Key")));
+        .check(matches(withText("1.2.840.113549.1.1.1")));
+        
+        
     }
 }
