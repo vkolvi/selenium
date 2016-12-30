@@ -1,9 +1,14 @@
+Google Git
+Sign in
+android / platform / frameworks / testing / android-support-test / . / espresso / sample / src / androidTest / java / android / support / test / testapp / ActionBarTest.java
+blob: ca7f73c083e602960de3a87b3c3c403abffa3de9 [file] [log] [blame]
 /**
  AUTHOR: VARUN
  DETAILS: Espresso with action bar, action controller and Action flow 
  SCOPE: Layout for android UI Automation
  OUT OF SCOPE: 
  INITIAL DATE: 20-12-2016
+
  **/
 
 package android.support.test.testapp;
@@ -65,15 +70,31 @@ public class ActionBarTest extends ActivityInstrumentationTestCase2<ActionBarTes
         onView(withId(R.id.text_action_bar_result))
         .check(matches(withText("World")));
     }
+    
     @SuppressWarnings("unchecked")
+    public void testActionBarOverflow() {
+        onView(withId(R.id.hide_contextual_action_bar))
+        .perform(click());
+        // Open the overflow menu from action bar
+        openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
+        onView(withText("World"))
+        .perform(click());
+        onView(withId(R.id.text_action_bar_result))
+        .check(matches(withText("World")));
+    }
+    
+    
+    @Suppressstatus("fail")
     public void testActionModeOverflow() {
         onView(withId(R.id.show_contextual_action_bar))
         .perform(click());
         // Open the overflow menu from contextual action mode.
         openContextualActionModeOverflowMenu();
-        onView(withText("Key"))
+        onView(withText("1.2.840.113549.1.1.1"))
         .perform(click());
         onView(withId(R.id.text_action_bar_result))
-        .check(matches(withText("Key")));
+        .check(matches(withText("1.2.840.113549.1.1.1")));
+        
+        
     }
 }
